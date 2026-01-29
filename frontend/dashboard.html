@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistema de Gestión</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>🏢 Sistema de Gestión</h1>
+            <div class="user-info">
+                <span id="userName">Usuario</span>
+                <button onclick="logout()" class="btn btn-secondary">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Panel de Bienvenida -->
+            <section class="welcome-section">
+                <h2>Bienvenido, <span id="userNameDisplay"></span></h2>
+                <p>Seleccione una opción del menú para comenzar</p>
+            </section>
+            
+            <!-- Estadísticas -->
+            <section class="stats-section">
+                <h3>Estadísticas</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-info">
+                            <p class="stat-label">Total Acciones</p>
+                            <p class="stat-value" id="totalAcciones">0</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⏳</div>
+                        <div class="stat-info">
+                            <p class="stat-label">Pendientes</p>
+                            <p class="stat-value" id="accionesPendientes">0</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🔄</div>
+                        <div class="stat-info">
+                            <p class="stat-label">En Proceso</p>
+                            <p class="stat-value" id="accionesEnProceso">0</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <p class="stat-label">Completadas</p>
+                            <p class="stat-value" id="accionesCompletadas">0</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Acciones Rápidas -->
+            <section class="actions-section">
+                <h3>Acciones Rápidas</h3>
+                <div class="actions-grid">
+                    <button class="action-btn" onclick="window.location.href='formulario.html'">
+                        <span class="action-icon">📝</span>
+                        <span>Nueva Acción</span>
+                    </button>
+                    
+                    <button class="action-btn" onclick="cargarAcciones()">
+                        <span class="action-icon">📋</span>
+                        <span>Ver Mis Acciones</span>
+                    </button>
+                    
+                    <button class="action-btn" onclick="window.location.href='tipificaciones.html'">
+                        <span class="action-icon">🏷️</span>
+                        <span>Tipificaciones</span>
+                    </button>
+                </div>
+            </section>
+            
+            <!-- Últimas Acciones -->
+            <section class="recent-section">
+                <h3>Últimas Acciones</h3>
+                <div id="ultimasAcciones" class="acciones-list">
+                    <p class="loading">Cargando...</p>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+    
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
