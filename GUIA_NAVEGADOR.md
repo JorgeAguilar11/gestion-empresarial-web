@@ -120,7 +120,7 @@ PORT=3000
 NODE_ENV=development
 
 # IMPORTANTE: Pon tu contraseña de MySQL aquí
-DB_HOST=localhost
+DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_USER=root
 DB_PASSWORD=TU_CONTRASEÑA_MYSQL_AQUI
