@@ -25,6 +25,8 @@ Aplicación web empresarial para **entornos internos y de prueba** que permite:
 
 ## 🚀 Inicio Rápido
 
+### Primera vez - Configuración inicial
+
 ```bash
 # 1. Configurar base de datos
 mysql -u root -p < database/schema.sql
@@ -35,18 +37,32 @@ cd backend
 npm install
 cp .env.example .env
 # Editar .env con tus credenciales de MySQL
-npm start
-
-# 3. Iniciar frontend (en otra terminal)
-npx serve frontend -p 8080
-
-# 4. Abrir en navegador
-open http://localhost:8080/login.html
 ```
 
-**Usuario de prueba:** admin / password123
+### 📝 Para Volver a Ejecutar el Proyecto
 
-📖 **Documentación completa:** Ver [GUIA_NAVEGADOR.md](GUIA_NAVEGADOR.md)
+#### 1️⃣ Terminal 1 - Backend
+```bash
+cd /Users/[tu-usuario]/Proyecto_Captura_HMTL/backend
+node server.js
+```
+
+#### 2️⃣ Terminal 2 - Frontend
+```bash
+cd /Users/[tu-usuario]/Proyecto_Captura_HMTL/frontend
+python3 -m http.server 8080
+```
+
+#### 3️⃣ Navegador
+Ve a: **http://localhost:8080/login.html**
+
+**Credenciales:** `admin` / `password123`
+
+---
+
+**📖 Más documentación:**
+- [GUIA_NAVEGADOR.md](GUIA_NAVEGADOR.md) - Uso del sistema
+- [PROPUESTA_SEGURIDAD_TI.md](PROPUESTA_SEGURIDAD_TI.md) - Documento para presentar a TI
 
 ---
 
